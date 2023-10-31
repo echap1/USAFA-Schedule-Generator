@@ -35,7 +35,7 @@ T_DAY = False
 classes = [
     # M Days
     Class("Mech 220", M_DAY, Periods.C1, "Fairchild 5H20"),
-    Class("English 211", M_DAY, Periods.C2, "Fairchild 4D10"),
+    # Class("English 211", M_DAY, Periods.C2, "Fairchild 4D10"),
     Class("ECE 495", M_DAY, Periods.C3, "Fairchild 2F50"),
     Class("CompSci 467", M_DAY, Periods.C4, "Fairchild 4F5"),
     Class("TBD", M_DAY, Periods.C5, "TBD", category="Squad Meeting"),
