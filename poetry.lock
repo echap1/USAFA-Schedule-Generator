@@ -102,5 +102,5 @@ future-regex = ["regex"]
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.9"
-content-hash = "251193a90a70cdc4ed3fa04e0c3862a27df527db3f79800ec2d0a59e45a02f79"
+python-versions = "^3.11"
+content-hash = "a302c78ed1dd56bb41aa1bdabd91f63730121a6af95576e15c4cbb3170c0fad2"

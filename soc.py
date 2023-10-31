@@ -3,7 +3,7 @@ from datetime import time
 
 import pytz.reference
 
-TZ = pytz.reference.Mountain
+TZ = pytz.timezone('America/Denver')
 
 
 @dataclass(unsafe_hash=True)
