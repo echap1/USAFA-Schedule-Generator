@@ -44,15 +44,16 @@ class DaySchedule:
             if self.soc[c.period] is None:
                 continue
 
+            period = c.period
             end_period = c.end_period if c.end_period else c.period
             if c.name == "MSS 251":  # CAUSE MSS IS WEIRD
                 single_periods = {1, 2, 3, 7, 8, 9, 12, 13, 19, 21, 24, 25, 26, 27, 32, 40}
                 if self.lesson in single_periods:
-                    end_period = c.period
+                    period = end_period
 
             e = Event()
-            e.name = f"[{'M' if c.m_day else 'T'}{c.period.name}] {c.name}"
-            e.begin = datetime.combine(self.date, self.soc[c.period][0])
+            e.name = f"[{'M' if c.m_day else 'T'}{period.name}] {c.name}"
+            e.begin = datetime.combine(self.date, self.soc[period][0])
             e.end = datetime.combine(self.date, self.soc[end_period][1])
             e.categories.add(c.category)
             e.location = c.location
