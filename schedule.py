@@ -26,13 +26,14 @@ class DaySchedule:
         day_event.make_all_day()
         events.append(day_event)
 
-        if self.date.weekday() <= 3:
-            cyber_event = Event()
-            cyber_event.name = "Cyber Practice"
-            cyber_event.begin = datetime.combine(self.date, time(15, 45, tzinfo=TZ))
-            cyber_event.end = datetime.combine(self.date, time(17, 0, tzinfo=TZ))
-            cyber_event.categories.add("Club")
-            events.append(cyber_event)
+        # RIP LOS
+        # if self.date.weekday() <= 3:
+        #     cyber_event = Event()
+        #     cyber_event.name = "Cyber Practice"
+        #     cyber_event.begin = datetime.combine(self.date, time(15, 45, tzinfo=TZ))
+        #     cyber_event.end = datetime.combine(self.date, time(17, 0, tzinfo=TZ))
+        #     cyber_event.categories.add("Club")
+        #     events.append(cyber_event)
 
         for c in classes:
             if c.m_day != self.m_day:
