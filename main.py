@@ -2,48 +2,33 @@ from datetime import date
 
 from classes import Class, C_GO, D_GO, EF_GO, GH_GO, G_GO
 from schedule import SemesterSchedule
-from soc import Periods, normal_soc, special_soc_ecdt, special_soc_parents_weekend_friday
+from soc import Periods, normal_soc, special_soc_ecdt
 from ics import Calendar
 
-start_date = date(2024, 1, 8)
+start_date = date(2024, 8, 8)
 
 off_days: set[date] = {
-    date(2023, 9, 4),  # Labor Day
-    date(2023, 9, 27),  # CW Training Day
-    date(2023, 10, 9),  # Columbus Day
-    date(2023, 11, 10),  # Veterans Day
-
-    date(2023, 11, 22),  # THANKSGIVING
-    date(2023, 11, 23),
-    date(2023, 11, 24),
-    date(2023, 11, 25),
-    date(2023, 11, 26),
-
-    date(2024, 1, 15),  # MLK Day
-    date(2024, 2, 19),  # Presidents' Day
-    date(2024, 2, 23),  # NCLS
-    date(2024, 3, 15),  # Recognition
-
-    date(2024, 3, 25),  # SPRING BREAK
-    date(2024, 3, 26),
-    date(2024, 3, 27),
-    date(2024, 3, 28),
-    date(2024, 3, 29),
-
-    date(2024, 4, 26),  # Sup's day
+    date(2024, 8, 30),
+    date(2024, 9, 2),
+    date(2024, 10, 14),
+    date(2024, 10, 18),
+    date(2024, 11, 11),
+    date(2024, 11, 26),
+    date(2024, 11, 27),
+    date(2024, 11, 28),
+    date(2024, 11, 29),
 }
 
 ssoc_days = {
-    date(2023, 8, 16): special_soc_ecdt,
-    date(2023, 9, 1): special_soc_parents_weekend_friday,
-    date(2023, 9, 13): special_soc_ecdt,
-    date(2023, 10, 18): special_soc_ecdt,
-    date(2023, 11, 15): special_soc_ecdt,
+    date(2023, 8, 21): special_soc_ecdt,
+    date(2023, 9, 18): special_soc_ecdt,
+    date(2023, 10, 23): special_soc_ecdt,
+    date(2023, 11, 13): special_soc_ecdt,
 
-    date(2024, 1, 10): special_soc_ecdt,
-    date(2024, 2, 7): special_soc_ecdt,
-    date(2024, 3, 13): special_soc_ecdt,
-    date(2024, 4, 17): special_soc_ecdt,
+    date(2024, 1, 22): special_soc_ecdt,
+    date(2024, 2, 12): special_soc_ecdt,
+    date(2024, 3, 12): special_soc_ecdt,
+    date(2024, 4, 23): special_soc_ecdt,
 }
 
 
@@ -66,17 +51,15 @@ classes = [
     # Class("Swimming", T_DAY, Periods.PE3, "CFC", D_GO)
 
     # M Days
-    Class("Cyber 431", M_DAY, Periods.C2, "Fairchild 2D6"),
-    Class("Law 220", M_DAY, Periods.C3, "Fairchild 5H41"),
-    Class("Cyber 355X", M_DAY, Periods.C4, "Fairchild 2D17", GH_GO),
-    Class("Basic Swim", M_DAY, Periods.PE6, "CFC", EF_GO),
-    Class("Basic Water Survival", M_DAY, Periods.PE6, "CFC", G_GO),
+    Class("Cyber 333", M_DAY, Periods.C1, "Fairchild 2E11", end_period=Periods.C2),
+    Class("English 212", M_DAY, Periods.C3, "Fairchild 3J11"),
+    Class("Cyber 435", M_DAY, Periods.C4, "Fairchild 2D17"),
+    Class("ECE 382", M_DAY, Periods.C5, "Fairchild 2E48"),
+    Class("Leadership 300", M_DAY, Periods.C6, "Fairchild 5H22", go=C_GO),
 
     # T Days
-    Class("Math 356", T_DAY, Periods.C1, "Fairchild 5D4"),
-    Class("ECE 332", T_DAY, Periods.C2, "Fairchild 2G6"),
-    Class("Polisci 211", T_DAY, Periods.C5, "Fairchild 5K35"),
-    Class("ECE 281", T_DAY, Periods.C6, "Fairchild 2E48"),
+    Class("ECE 321", T_DAY, Periods.C1, "Fairchild 2G6", end_period=Periods.C2),
+    Class("ECE 346", T_DAY, Periods.C5, "Fairchild 2E35"),
 ]
 
 s = SemesterSchedule(start_date, off_days, normal_soc, ssoc_days)
