@@ -94,13 +94,13 @@ files = [
 
 [[package]]
 name = "tatsu"
-version = "5.12.1"
+version = "5.12.2"
 description = "TatSu takes a grammar in a variation of EBNF as input, and outputs a memoizing PEG/Packrat parser in Python."
 optional = false
 python-versions = ">=3.11"
 files = [
-    {file = "TatSu-5.12.1-py3-none-any.whl", hash = "sha256:97073bcf496a54adc6c87043cfd70c177a5f5f95c09c3ba0cfea43286ea728e1"},
-    {file = "tatsu-5.12.1.tar.gz", hash = "sha256:57a6da442f71f07cac4fc99c5f997e2559e340b9e5177449dc35b751e18e3405"},
+    {file = "TatSu-5.12.2-py3-none-any.whl", hash = "sha256:9c313186ae5262662cb3fbec52c9a12db1ef752e615f46cac3eb568cb91eacf9"},
+    {file = "tatsu-5.12.2.tar.gz", hash = "sha256:5894dc7ddba9a1886a95ff2f06cef1be2b3d3a37c776eba8177ef4dcd80ccb03"},
 ]
 
 [package.extras]

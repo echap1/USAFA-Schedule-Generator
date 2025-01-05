@@ -28,12 +28,12 @@ normal_soc = {
     Periods.C2: (time(9, 0, tzinfo=TZ), time(9, 53, tzinfo=TZ)),
     Periods.C3: (time(10, 0, tzinfo=TZ), time(10, 53, tzinfo=TZ)),
     Periods.C4: (time(11, 0, tzinfo=TZ), time(11, 53, tzinfo=TZ)),
-    Periods.C5: (time(13, 0, tzinfo=TZ), time(13, 53, tzinfo=TZ)),
-    Periods.C6: (time(14, 0, tzinfo=TZ), time(14, 53, tzinfo=TZ)),
+    Periods.C5: (time(14, 0, tzinfo=TZ), time(14, 53, tzinfo=TZ)),
+    Periods.C6: (time(15, 0, tzinfo=TZ), time(15, 53, tzinfo=TZ)),
 
     Periods.PE1: (time(8, 15, tzinfo=TZ), time(9, 30, tzinfo=TZ)),
     Periods.PE3: (time(10, 15, tzinfo=TZ), time(11, 30, tzinfo=TZ)),
-    Periods.PE5: (time(13, 30, tzinfo=TZ), time(14, 45, tzinfo=TZ)),
+    Periods.PE5: (time(14, 15, tzinfo=TZ), time(15, 30, tzinfo=TZ)),
 }
 
 special_soc_ecdt = {

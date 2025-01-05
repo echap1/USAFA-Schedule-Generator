@@ -29,7 +29,7 @@ class DaySchedule:
         if self.date.weekday() <= 3:
             cyber_event = Event()
             cyber_event.name = "Marathon Practice"
-            cyber_event.begin = datetime.combine(self.date, time(16, 0, tzinfo=TZ))
+            cyber_event.begin = datetime.combine(self.date, time(16, 15, tzinfo=TZ))
             cyber_event.end = datetime.combine(self.date, time(17, 30, tzinfo=TZ))
             cyber_event.categories.add("Club")
             events.append(cyber_event)

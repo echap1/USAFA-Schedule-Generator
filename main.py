@@ -5,7 +5,7 @@ from schedule import SemesterSchedule
 from soc import Periods, normal_soc, special_soc_ecdt
 from ics import Calendar
 
-start_date = date(2024, 8, 8)
+start_date = date(2025, 1, 6)
 
 off_days: set[date] = {
     date(2024, 8, 30),
@@ -16,6 +16,17 @@ off_days: set[date] = {
     date(2024, 11, 27),
     date(2024, 11, 28),
     date(2024, 11, 29),
+    date(2025, 1, 20),
+    date(2025, 2, 17),
+    date(2025, 2, 21),
+    date(2025, 3, 6),
+    date(2025, 3, 7),
+    date(2025, 3, 21),
+    date(2025, 3, 24),
+    date(2025, 3, 25),
+    date(2025, 3, 26),
+    date(2025, 3, 27),
+    date(2025, 3, 28),
 }
 
 ssoc_days = {
@@ -24,10 +35,10 @@ ssoc_days = {
     date(2023, 10, 23): special_soc_ecdt,
     date(2023, 11, 13): special_soc_ecdt,
 
-    date(2024, 1, 22): special_soc_ecdt,
-    date(2024, 2, 12): special_soc_ecdt,
-    date(2024, 3, 12): special_soc_ecdt,
-    date(2024, 4, 23): special_soc_ecdt,
+    date(2025, 1, 22): special_soc_ecdt,
+    date(2025, 2, 12): special_soc_ecdt,
+    date(2025, 3, 12): special_soc_ecdt,
+    date(2025, 4, 23): special_soc_ecdt,
 }
 
 
@@ -49,16 +60,27 @@ classes = [
     # Class("Leadership 200", T_DAY, Periods.C6, "Fairchild 5H23", C_GO),
     # Class("Swimming", T_DAY, Periods.PE3, "CFC", D_GO)
 
+    # # M Days
+    # Class("Cyber 333", M_DAY, Periods.C1, "Fairchild 2E11", end_period=Periods.C2),
+    # Class("English 212", M_DAY, Periods.C3, "Fairchild 3J11"),
+    # Class("Cyber 435", M_DAY, Periods.C4, "Fairchild 2D17"),
+    # Class("ECE 382", M_DAY, Periods.C5, "Fairchild 2E48"),
+    # Class("Leadership 300", M_DAY, Periods.C6, "Fairchild 5H22", go=C_GO),
+    #
+    # # T Days
+    # Class("ECE 321", T_DAY, Periods.C1, "Fairchild 2G6", end_period=Periods.C2),
+    # Class("ECE 346", T_DAY, Periods.C5, "Fairchild 2E35"),
+
     # M Days
-    Class("Cyber 333", M_DAY, Periods.C1, "Fairchild 2E11", end_period=Periods.C2),
-    Class("English 212", M_DAY, Periods.C3, "Fairchild 3J11"),
-    Class("Cyber 435", M_DAY, Periods.C4, "Fairchild 2D17"),
-    Class("ECE 382", M_DAY, Periods.C5, "Fairchild 2E48"),
-    Class("Leadership 300", M_DAY, Periods.C6, "Fairchild 5H22", go=C_GO),
+    Class("ECE 383", M_DAY, Periods.C1, "Fairchild 2E48", end_period=Periods.C2),
+    Class("ECE 343", M_DAY, Periods.C4, "Fairchild 2E10"),
+    Class("Combatives 2", M_DAY, Periods.C5, "Combatives Gym", end_period=Periods.C6),
 
     # T Days
-    Class("ECE 321", T_DAY, Periods.C1, "Fairchild 2G6", end_period=Periods.C2),
-    Class("ECE 346", T_DAY, Periods.C5, "Fairchild 2E35"),
+    Class("ECE 333", T_DAY, Periods.C2, "Fairchild 2E10"),
+    Class("ECE 495", T_DAY, Periods.C4, "None"),
+    Class("CompSci 483", T_DAY, Periods.C5, "Fairchild 4F21"),
+    Class("Cyber 332", T_DAY, Periods.C6, "Fairchild 2E11"),
 ]
 
 s = SemesterSchedule(start_date, off_days, normal_soc, ssoc_days)
